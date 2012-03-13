@@ -1,12 +1,12 @@
 Nightingale Interview simple App.
 
-To launch the application you only need to launch the hello command from the 'Play' menu of Eclipse. If the application is running you need 
-to stop it before you can relauch it. Check for the 
-
-In this app you have multiple tasks
+Build Path setup
+The project will be looking for GWT SDK. Would need to make sure that Eclipse can find the required jar (gwt-user and gwt-dev) to be able to launch the project from Eclipse.
 
 
- - Hello.java -
+ ==== Tasks ====
+ 
+ - in Hello.java -
 
 *) Change the color of the Send button by adding the CSS class red.
 
@@ -18,7 +18,7 @@ In this app you have multiple tasks
    Use the countCallButton as the action button and countCallLabel to show the number of succeeded calls
 
 
- - PersonServiceImpl.java and Hello.java -
+ - in PersonServiceImpl.java and Hello.java -
 
 *) Add the parameter for the SQL query to get a person by it's Id
    Check that the id get passed to the 'server-side' implementation.
