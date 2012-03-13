@@ -9,8 +9,6 @@
  */
 package com.nightingale.server;
 
-import java.util.ArrayList;
-
 import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 import com.nightingale.client.PersonService;
 import com.nightingale.shared.PersonInfo;
@@ -30,30 +28,6 @@ public class PersonServiceImpl extends RemoteServiceServlet implements PersonSer
         returnValue.setFirstName("Tyrion");
         returnValue.setLastName("Lannister");
         returnValue.setPersonID(1);
-        
-        // Easier to mock object than have a full database connection
-//        try {
-//			Connection conn = pgConnProvider.getConn();
-//			String query = "select personid, firstname,  lastname from person";
-//			
-//			Statement select = conn.createStatement();
-//			ResultSet result = select.executeQuery(query);
-//			
-//			if (result.next()) {
-//			    returnValue.setPersonID(result.getInt(1));
-//			    returnValue.setFirstName(result.getString(2));
-//			    returnValue.setLastName(result.getString(3));
-//			} else {
-//			    throw new Exception("Did not find any person");
-//			}
-//			result.close();
-//			select.close();
-//			conn.close();
-//			
-//		} catch (PSQLException e) {
-//			e.printStackTrace();
-//			throw new Exception("SQL error : " + e.getMessage());
-//		}
         
         return returnValue;
     }
